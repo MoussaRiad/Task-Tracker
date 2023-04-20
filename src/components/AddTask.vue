@@ -43,7 +43,7 @@
         computed:{
             disabled(){
                 console.log(toString(this.day.length))
-                return (this.text.length==0 && this.day );
+                return (this.text.length<10 && this.day );
             }
         },
         methods:{
@@ -86,6 +86,14 @@
     box-shadow: 0 0 8px 0 black;
     border-radius: 5px;
     background-color: #fefefe;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
 .close{
     position: absolute ;

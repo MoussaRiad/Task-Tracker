@@ -1,11 +1,13 @@
 <script>
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 import Tasks from './components/Tasks.vue';
 import AddTask from './components/AddTask.vue';
 export default {
   name: 'App',
   components: {
     Header,
+    Footer,
     Tasks,
     AddTask
   },
@@ -77,6 +79,7 @@ export default {
       </div>
       <Tasks @toggle-reminder="toggleTask" @delete-task="deleteTask" :tasks="tasks"/>
     </main>
+    <Footer />
   </div>
 </template>
 
